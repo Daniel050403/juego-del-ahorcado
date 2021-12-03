@@ -28,8 +28,7 @@ public class Ahorcado
       int intentos = 5;
       char letraActual;
       bool terminado = false;
- 
-      // Parte repetitiva
+
       do
       {
  
