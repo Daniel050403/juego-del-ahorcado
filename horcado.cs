@@ -6,16 +6,14 @@ public class Ahorcado
   public static void Main()
   {
 
-   
- 
       
- 
+      
       string[] palabras = {"juan","daniel","jose"};
       Random generadorAleatorio = new Random();
       int numeroAzar = generadorAleatorio.Next(0,palabras.Length);
       string palabraAdivinar = palabras[ numeroAzar ];
  
-      
+     
       string palabraMostrar = "";
       for (int i=0; i< palabraAdivinar.Length; i++)
           if (palabraAdivinar[i] == ' ')
@@ -24,15 +22,16 @@ public class Ahorcado
               palabraMostrar += "-";
  
  
-    
+      // Otras variables
       int intentos = 5;
       char letraActual;
       bool terminado = false;
-
+ 
+      // Parte repetitiva
       do
       {
  
-          letra
+          
           Console.WriteLine( "Palabra oculta:  {0}", palabraMostrar);
           Console.WriteLine( "Fallos restantes: {0}", intentos);
  
@@ -44,7 +43,7 @@ public class Ahorcado
           if( palabraAdivinar.IndexOf( letraActual ) == -1 )
               intentos--;
  
-        
+      
           string siguienteMostrar = "";
  
           for( int i = 0; i < palabraAdivinar.Length; i++)
@@ -56,8 +55,7 @@ public class Ahorcado
           }
           palabraMostrar = siguienteMostrar;
  
-          /
-          
+      
           if( palabraMostrar.IndexOf("-") < 1 )
           {
               Console.WriteLine("Felicidades, acertaste!  ({0})",
